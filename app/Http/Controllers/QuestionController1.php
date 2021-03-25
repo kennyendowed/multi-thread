@@ -25,34 +25,6 @@ class QuestionController1 extends Controller
         pcntl_signal(SIGINT,  $callback);
         pcntl_signal(SIGCHLD, $callback);
 
-    //     foreach ($contact as $key => $value) {
-
-    //         $data = array(
-    //                 'name' => $value->username,
-    //                  'email'=>$value->email,
-    //                 'contactSubject'=>'Pay bill',
-    //                 'app_name' => config('app.name'),
-    //                 'no-reply' => 'kenneyg50@gmail.com',
-    //                 'text'=>'Hello, world of multi-processing! for bill alert'
-    //                   );
-    // // dd($data);
-    //       Mail::send('mails.member', $data, function ($message) use ($data){
-    
-    //           $to_email =$data['email'];
-    //           $to_name  = $data['name'];
-    //           $subject  = $data['contactSubject'];
-    //           $message->sender($data['no-reply'], $data['app_name']);
-    //           $message->replyTo($data['no-reply'], ' Web Administrator');
-    //             $message->from($data['no-reply'],$data['app_name']);
-    //           $message->subject($subject);
-    //               $message->to($to_email, $to_name);
-    //           });
-    //         }
-    //         if(count(Mail::failures()) > 0){
-    //             return response()->json(['data' =>$data,'code'=>Response::HTTP_EXPECTATION_FAILED],Response::HTTP_EXPECTATION_FAILED);
-    //               } else {
-    //                 return response()->json(['data' =>$data,'code'=>Response::HTTP_OK],Response::HTTP_OK);
-    //                   }
 
         // Create a batch of test messages to send
         $email = array(
@@ -111,17 +83,6 @@ printf("\nDone! Sent %d messages in %d seconds\n\n", count((array)$queue), $runt
 
 exit;
 
-// $data1['message']="\nDone! Sent %d messages in %d seconds\n\n". count($queue). $runtime;
-
-// return response()->json(['data' =>$data,'code'=>Response::HTTP_OK],Response::HTTP_OK);
-
-
-
-       
-    // } 
-    // else {
-    //    return response()->json(['error' =>'Recored not found','code'=>Response::HTTP_UNPROCESSABLE_ENTITY],Response::HTTP_UNPROCESSABLE_ENTITY);
-    // }  
     }
 
   
