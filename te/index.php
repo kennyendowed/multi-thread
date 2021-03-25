@@ -24,14 +24,14 @@ $queue = array_fill(0, 10, $email);
 $sender = function($message_id, $message)
 {
 	// Pretend to send it, we'll assume a normal latency of 500-1000ms
-	$to      = 'kenneyg50@gmail.com';
-$subject = 'the subject';
-$message = 'hello';
-$headers = 'From: webmaster@example.com' . "\r\n" .
-    'Reply-To: webmaster@example.com' . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
+// 	$to      = 'kenneyg50@gmail.com';
+// $subject = 'the subject';
+// $message = 'hello';
+// $headers = 'From: webmaster@example.com' . "\r\n" .
+//     'Reply-To: webmaster@example.com' . "\r\n" .
+//     'X-Mailer: PHP/' . phpversion();
 
-mail($to, $subject, $message, $headers);
+// mail($to, $subject, $message, $headers);
 	$ms = rand(500, 1000);
 	usleep($ms * 1000);
 	printf("Process %d: sent message %d (%d ms)\n", posix_getpid(), $message_id, $ms);
